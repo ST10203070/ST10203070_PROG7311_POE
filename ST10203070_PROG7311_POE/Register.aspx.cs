@@ -42,6 +42,32 @@ namespace ST10203070_PROG7311_POE
                 try
                 {
                     db.SaveChanges();
+                    // Add the user to the appropriate role table
+                    switch (role)
+                    {
+                        case "Employee":
+                            var newEmployee = new Employee
+                            {
+                                Name = username, // You can adjust this based on your requirements
+                                Email = username // Assuming username serves as the email for employees
+                            };
+                            db.Employees.Add(newEmployee);
+                            break;
+                        case "Farmer":
+                            var newFarmer = new Farmer
+                            {
+                                Name = username, // You can adjust this based on your requirements
+                                Email = username // Assuming username serves as the email for farmers
+                            };
+                            db.Farmers.Add(newFarmer);
+                            break;
+                        default:
+                            // Handle the case where the role is not recognized
+                            break;
+                    }
+
+                    db.SaveChanges(); // Save changes to role table
+
                     // Redirect to login page or show a success message
                     Response.Redirect("Login.aspx", false);
                 }
@@ -54,3 +80,5 @@ namespace ST10203070_PROG7311_POE
         }
     }
 }
+
+
