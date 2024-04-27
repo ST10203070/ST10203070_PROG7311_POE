@@ -9,7 +9,6 @@ namespace ST10203070_PROG7311_POE
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Additional logic can be added here if needed
         }
 
         protected void RegisterButton_Click(object sender, EventArgs e)
@@ -33,7 +32,7 @@ namespace ST10203070_PROG7311_POE
                 var newUser = new User
                 {
                     Username = username,
-                    Password = password, // Remember, in a real application you should hash the password
+                    Password = password, 
                     Role = role
                 };
 
@@ -48,21 +47,20 @@ namespace ST10203070_PROG7311_POE
                         case "Employee":
                             var newEmployee = new Employee
                             {
-                                Name = username, // You can adjust this based on your requirements
-                                Email = username // Assuming username serves as the email for employees
+                                Name = username, 
+                                Email = username 
                             };
                             db.Employees.Add(newEmployee);
                             break;
                         case "Farmer":
                             var newFarmer = new Farmer
                             {
-                                Name = username, // You can adjust this based on your requirements
-                                Email = username // Assuming username serves as the email for farmers
+                                Name = username, 
+                                Email = username 
                             };
                             db.Farmers.Add(newFarmer);
                             break;
                         default:
-                            // Handle the case where the role is not recognized
                             break;
                     }
 

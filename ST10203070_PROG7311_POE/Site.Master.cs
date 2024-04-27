@@ -11,7 +11,11 @@ namespace ST10203070_PROG7311_POE
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                AddProductLink.Visible = true; // The link is always visible
+            }
         }
+
     }
 }

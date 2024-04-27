@@ -11,7 +11,7 @@ namespace ST10203070_PROG7311_POE
 {
 
 
-    public partial class Register
+    public partial class AddProduct
     {
 
         /// <summary>
@@ -24,40 +24,49 @@ namespace ST10203070_PROG7311_POE
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Username control.
+        /// AddProductPanel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Username;
+        protected global::System.Web.UI.WebControls.Panel AddProductPanel;
 
         /// <summary>
-        /// Password control.
+        /// ProductName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Password;
+        protected global::System.Web.UI.WebControls.TextBox ProductName;
 
         /// <summary>
-        /// Role control.
+        /// Category control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Role;
+        protected global::System.Web.UI.WebControls.TextBox Category;
 
         /// <summary>
-        /// RegisterButton control.
+        /// ProductionDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button RegisterButton;
+        protected global::System.Web.UI.WebControls.TextBox ProductionDate;
+
+        /// <summary>
+        /// SubmitProduct control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button SubmitProduct;
 
         /// <summary>
         /// ErrorMessage control.
@@ -69,12 +78,21 @@ namespace ST10203070_PROG7311_POE
         protected global::System.Web.UI.WebControls.Label ErrorMessage;
 
         /// <summary>
-        /// LoginHyperLink control.
+        /// SuccessLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink LoginHyperLink;
+        protected global::System.Web.UI.WebControls.Label SuccessLabel;
+
+        /// <summary>
+        /// NotFarmerMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label NotFarmerMessage;
     }
 }
