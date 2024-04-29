@@ -4,38 +4,30 @@
 
     <main>
         <section class="row" aria-labelledby="aspnetTitle">
-            <h1 id="aspnetTitle">ASP.NET</h1>
-            <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-            <p><a href="http://www.asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
+            <h1 id="aspnetTitle">Agri-Energy Connect</h1>
+            <p class="lead">Agri-Energy Connect is a web platform that bridges the gap between the agricultural sector and green energy technology providers.</p>
         </section>
 
         <div class="row">
-            <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-                <h2 id="gettingStartedTitle">Getting started</h2>
+            <section class="col-md-4" aria-labelledby="farmingHubTitle">
+                <h2 id="farmingHubTitle">Sustainable Farming Hub</h2>
                 <p>
-                    ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-                A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-                </p>
-                <p>
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
+                    A resource centre for sharing best practices in sustainable farming, including organic farming techniques, water conservation methods, and soil health maintenance.
+                    Interactive forums and discussion boards for farmers to seek advice, share experiences, and collaborate on sustainable farming initiatives.
                 </p>
             </section>
-            <section class="col-md-4" aria-labelledby="librariesTitle">
-                <h2 id="librariesTitle">Get more libraries</h2>
+            <section class="col-md-4" aria-labelledby="greenEnergyTitle">
+                <h2 id="greenEnergyTitle">Green Energy Marketplace</h2>
                 <p>
-                    NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-                </p>
-                <p>
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
+                   A marketplace for green energy solutions tailored to agricultural needs, such as solar-powered irrigation systems, wind turbines for farms, and biogas energy solutions.
+                   Features for comparing products, reviewing technologies, and connecting with green tech providers.
                 </p>
             </section>
-            <section class="col-md-4" aria-labelledby="hostingTitle">
-                <h2 id="hostingTitle">Web Hosting</h2>
+            <section class="col-md-4" aria-labelledby="educationTitle">
+                <h2 id="educationTitle">Educational and Training Resources</h2>
                 <p>
-                    You can easily find a web hosting company that offers the right mix of features and price for your applications.
-                </p>
-                <p>
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
+                    Online courses, webinars, and workshops on integrating green energy technologies in agriculture.
+                    Material focusing on the benefits and practicalities of adopting renewable energy sources on farms.                
                 </p>
             </section>
         </div>

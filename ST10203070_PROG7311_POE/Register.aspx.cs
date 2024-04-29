@@ -15,8 +15,13 @@ namespace ST10203070_PROG7311_POE
         {
             // Retrieve user input from the form
             string username = Username.Text;
-            string password = Password.Text; // In a real-world application, password should be hashed
+            string password = Password.Text; 
             string role = Role.SelectedValue;
+
+            // Hash the password with salt
+            string salt = PasswordHashingUtility.CreateSalt(10);
+            string hashedPassword = PasswordHashingUtility.GenerateSHA256Hash(password, salt);
+
 
             // Check if the username (email) already exists
             using (var db = new AgriEnergyDbEntities())
@@ -32,7 +37,8 @@ namespace ST10203070_PROG7311_POE
                 var newUser = new User
                 {
                     Username = username,
-                    Password = password, 
+                    Password = hashedPassword,
+                    Salt = salt, // Store salt in the database
                     Role = role
                 };
 

@@ -23,10 +23,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/">Home</a></li>
-                        <!-- Only display Add Product if the user is logged in and is a farmer, handle in code-behind -->
                         <li class="nav-item"><a class="nav-link" runat="server" id="AddProductLink" href="~/AddProduct.aspx">Add Product</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/About">About</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" id="ViewProductsLink" href="~/ViewProducts.aspx">View Products</a></li>
                     </ul>
                     <ul class="navbar-nav">
                         <!-- Add links to Login and Register -->

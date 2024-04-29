@@ -18,5 +18,6 @@ namespace ST10203070_PROG7311_POE
         public string Username { get; set; }
         public string Password { get; set; }
         public string Role { get; set; }
+        public string Salt { get; set; }
     }
 }

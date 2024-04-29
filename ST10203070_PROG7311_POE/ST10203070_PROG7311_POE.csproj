@@ -111,6 +111,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="AddFarmer.aspx" />
     <Content Include="AddProduct.aspx" />
     <Content Include="AgriEnergyModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -212,12 +213,20 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="ViewProducts.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddFarmer.aspx.cs">
+      <DependentUpon>AddFarmer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddFarmer.aspx.designer.cs">
+      <DependentUpon>AddFarmer.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AddProduct.aspx.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -282,6 +291,7 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PasswordHashingUtility.cs" />
     <Compile Include="Product.cs">
       <DependentUpon>AgriEnergyModel.tt</DependentUpon>
     </Compile>
@@ -315,6 +325,13 @@
     </Compile>
     <Compile Include="User.cs">
       <DependentUpon>AgriEnergyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewProducts.aspx.cs">
+      <DependentUpon>ViewProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewProducts.aspx.designer.cs">
+      <DependentUpon>ViewProducts.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
