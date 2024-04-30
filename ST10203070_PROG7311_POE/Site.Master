@@ -24,6 +24,7 @@
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/">Home</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" id="AddProductLink" href="~/AddProduct.aspx">Add Product</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" id="AddFarmerLink" href="~/AddFarmer.aspx">Add Farmer</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" id="ViewProductsLink" href="~/ViewProducts.aspx">View Products</a></li>
                     </ul>
                     <ul class="navbar-nav">

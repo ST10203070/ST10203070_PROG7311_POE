@@ -23,8 +23,9 @@ namespace ST10203070_PROG7311_POE
                 }
                 else
                 {
+                    updatePanel.Visible = false;
                     NotEmployeeMessage.Visible = true;
-                    updatePanel.Visible = false; 
+                    NotEmployeeMessage.Text = "This feature is only available to employees.";
                 }
             }
         }
