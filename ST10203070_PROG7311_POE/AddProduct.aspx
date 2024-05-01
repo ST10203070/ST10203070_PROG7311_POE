@@ -71,20 +71,20 @@
             width: 100%;
             padding: 10px;
             margin-bottom: 20px;
-            background-color: #5cb85c; /* Green background */
-            color: white; /* White text */
+            background-color: #5cb85c; 
+            color: white; 
             border: none;
             border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
             text-align: center;
-            display: block; /* Make the button block level for full width */
-            text-decoration: none; /* Remove underline from links */
-            transition: background-color 0.3s; /* Smooth transition for background color */
+            display: block; 
+            text-decoration: none; 
+            transition: background-color 0.3s; 
         }
 
         .btn-green:hover {
-            background-color: #4cae4c; /* Darker shade of green on hover */
+            background-color: #4cae4c; 
         }
 
     </style>

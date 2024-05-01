@@ -17,14 +17,14 @@
             padding: 10px;
             background-color: #fff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            text-align: center; /* Ensure text alignment is applied to everything within the container */
+            text-align: center; 
         }
         .filter-group {
             margin-bottom: 20px;
             display: flex;
             align-items: center;
             flex-wrap: wrap;
-            justify-content: center; /* Center the filtering controls */
+            justify-content: center; 
         }
         label {
             margin-right: 10px;
@@ -47,7 +47,7 @@
             color: #d9534f;
             text-align: center;
             margin-bottom: 20px;
-            width: 100%; /* Make sure it spans the entire width of its container */
+            width: 100%; 
         }
         .back-link {
             display: block;
@@ -64,20 +64,20 @@
             width: 100%;
             padding: 10px;
             margin-bottom: 20px;
-            background-color: #5cb85c; /* Green background */
-            color: white; /* White text */
+            background-color: #5cb85c; 
+            color: white; 
             border: none;
             border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
             text-align: center;
-            display: block; /* Make the button block level for full width */
-            text-decoration: none; /* Remove underline from links */
-            transition: background-color 0.3s; /* Smooth transition for background color */
+            display: block; 
+            text-decoration: none;
+            transition: background-color 0.3s;
         }
 
         .btn-green:hover {
-            background-color: #4cae4c; /* Darker shade of green on hover */
+            background-color: #4cae4c; 
         }
         table {
             width: 100%;

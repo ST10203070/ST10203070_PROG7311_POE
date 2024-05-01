@@ -12,27 +12,35 @@ namespace ST10203070_PROG7311_POE
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (!HttpContext.Current.User.Identity.IsAuthenticated)
             {
-                if (IsEmployee())
+                // User is not logged in, redirect to the login page
+                Response.Redirect("~/Login.aspx");
+            }
+            else
+            {
+                if (!IsPostBack)  // Check if the page is not being loaded in response to a postback
                 {
-                    PopulateFarmers();
-                    PopulateProductTypes();
-                    updatePanel.Visible = true;
-                    NotEmployeeMessage.Visible = false;
-                }
-                else
-                {
-                    updatePanel.Visible = false;
-                    NotEmployeeMessage.Visible = true;
-                    NotEmployeeMessage.Text = "This feature is only available to employees.";
+                    if (IsEmployee())
+                    {
+                        PopulateFarmers();
+                        PopulateProductTypes();
+                        updatePanel.Visible = true;
+                        NotEmployeeMessage.Visible = false;
+                    }
+                    else
+                    {
+                        updatePanel.Visible = false;
+                        NotEmployeeMessage.Visible = true;
+                        NotEmployeeMessage.Text = "This feature is only available to employees.";
+                    }
                 }
             }
         }
 
+        // Method to check if user is an employee
         private bool IsEmployee()
         {
-            // Assume that the role "Employee" is stored as "Employee" in the database
             var username = HttpContext.Current.User.Identity.Name;
             using (var context = new AgriEnergyDbEntities())
             {
@@ -41,6 +49,7 @@ namespace ST10203070_PROG7311_POE
             }
         }
 
+        // Method to populate farmers in farmer drop down list
         private void PopulateFarmers()
         {
             using (var context = new AgriEnergyDbEntities())
@@ -53,6 +62,7 @@ namespace ST10203070_PROG7311_POE
             }
         }
 
+        // Method to populate product types in drop down list
         private void PopulateProductTypes()
         {
             using (var context = new AgriEnergyDbEntities())
@@ -63,17 +73,20 @@ namespace ST10203070_PROG7311_POE
             }
         }
 
+        // Method to automatically filter products by specific farmer 
         protected void FarmerDropdown_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Optional: Automatically filter products when a farmer is selected
+            //Automatically filter products when a farmer is selected
             FilterProducts();
         }
 
+        // Method to call FilterProducts() method when filter button is clicked
         protected void FilterProducts_Click(object sender, EventArgs e)
         {
             FilterProducts();
         }
 
+        // Method to filter products given filters added by user (employee)
         private void FilterProducts()
         {
             var startDate = String.IsNullOrEmpty(StartDate.Text) ? (DateTime?)null : DateTime.Parse(StartDate.Text);

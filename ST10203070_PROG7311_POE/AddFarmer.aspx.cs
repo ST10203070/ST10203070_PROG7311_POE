@@ -11,23 +11,31 @@ namespace ST10203070_PROG7311_POE
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Ensure that this page is only accessible by employees
-            if (!IsPostBack)
+            if (!HttpContext.Current.User.Identity.IsAuthenticated)
             {
-                if (!IsUserAnEmployee())
+                // User is not logged in, redirect to the login page
+                Response.Redirect("~/Login.aspx");
+            }
+            else
+            {
+                if (!IsPostBack)  // Check if the page is not being loaded in response to a postback
                 {
-                    AddFarmerPanel.Visible = false;
-                    NotEmployeeMessage.Visible = true;
-                    NotEmployeeMessage.Text = "This feature is only available to employees.";
-                }
-                else
-                {
-                    AddFarmerPanel.Visible = true;
-                    NotEmployeeMessage.Visible = false;
+                    if (!IsUserAnEmployee())
+                    {
+                        AddFarmerPanel.Visible = false;
+                        NotEmployeeMessage.Visible = true;
+                        NotEmployeeMessage.Text = "This feature is only available to employees.";
+                    }
+                    else
+                    {
+                        AddFarmerPanel.Visible = true;
+                        NotEmployeeMessage.Visible = false;
+                    }
                 }
             }
         }
 
+        // Method to add farmer to users and farmers tables
         protected void AddFarmer_Click(object sender, EventArgs e)
         {
             string farmerName = FarmerName.Text;
@@ -79,19 +87,21 @@ namespace ST10203070_PROG7311_POE
                 }
                 catch (Exception ex)
                 {
-                    // Log the exception (e.g., to a file or database)
+                    // Log the exception 
                     ErrorMessage.Text = "An error occurred while adding the farmer. Please try again.";
                     ErrorMessage.Visible = true;
                 }
             }
         }
 
+        // Method to clear form fields
         private void ClearForm()
         {
             FarmerName.Text = string.Empty;
             FarmerEmail.Text = string.Empty;
         }
 
+        // Method to check if user is an employee
         private bool IsUserAnEmployee()
         {
             // Retrieve the logged-in user's role and check if they are an employee

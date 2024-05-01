@@ -55,7 +55,7 @@
             text-align: center;
             margin-bottom: 20px;
         }
-        /* Style for the login link */
+        
         .login-link {
             display: block;
             margin-top: 15px;

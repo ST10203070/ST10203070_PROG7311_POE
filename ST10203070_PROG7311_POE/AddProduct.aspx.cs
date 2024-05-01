@@ -18,23 +18,27 @@ namespace ST10203070_PROG7311_POE
             }
             else
             {
-                // User is logged in, check if they are a farmer
-                if (IsUserAFarmer())
+                if (!IsPostBack)  // Check if the page is not being loaded in response to a postback
                 {
-                    // User is a farmer, show the add product form and hide the message
-                    AddProductPanel.Visible = true;
-                    NotFarmerMessage.Visible = false;
-                }
-                else
-                {
-                    // User is not a farmer, hide the add product form and show the message
-                    AddProductPanel.Visible = false;
-                    NotFarmerMessage.Visible = true;
-                    NotFarmerMessage.Text = "This feature is only available to farmers.";
+                    // User is logged in, check if they are a farmer
+                    if (IsUserAFarmer())
+                    {
+                        // User is a farmer, show the add product form and hide the message
+                        AddProductPanel.Visible = true;
+                        NotFarmerMessage.Visible = false;
+                    }
+                    else
+                    {
+                        // User is not a farmer, hide the add product form and show the message
+                        AddProductPanel.Visible = false;
+                        NotFarmerMessage.Visible = true;
+                        NotFarmerMessage.Text = "This feature is only available to farmers.";
+                    }
                 }
             }
         }
 
+        // Method to check if user is a farmer
         private bool IsUserAFarmer()
         {
             // Assume that the role "Farmer" is stored as "Farmer" in the database
@@ -46,6 +50,7 @@ namespace ST10203070_PROG7311_POE
             }
         }
 
+        // Method to get current farmer user id from table
         private int? GetCurrentFarmerId()
         {
             var username = HttpContext.Current.User.Identity.Name;
@@ -57,6 +62,7 @@ namespace ST10203070_PROG7311_POE
             }
         }
 
+        // Method to submit new product to products table
         protected void SubmitProduct_Click(object sender, EventArgs e)
         {
             if (Page.IsValid)
@@ -78,7 +84,6 @@ namespace ST10203070_PROG7311_POE
                 var farmerId = GetCurrentFarmerId();
                 if (!farmerId.HasValue)
                 {
-                    // Handle the error appropriately
                     ErrorMessage.Visible = true;
                     ErrorMessage.Text = "Could not retrieve farmer information.";
                     return;
@@ -101,7 +106,7 @@ namespace ST10203070_PROG7311_POE
                     SuccessLabel.Visible = true;
                     SuccessLabel.Text = "Product added successfully.";
 
-                    // Optionally clear the form fields after saving
+                    // Clear the form fields after saving
                     ProductName.Text = string.Empty;
                     Category.Text = string.Empty;
                     ProductionDate.Text = string.Empty;
@@ -109,7 +114,6 @@ namespace ST10203070_PROG7311_POE
             }
             else
             {
-                // If the page isn't valid, you can show an error message
                 ErrorMessage.Text = "Please fill in all required fields.";
                 ErrorMessage.Visible = true;
             }

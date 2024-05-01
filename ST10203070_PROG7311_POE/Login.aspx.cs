@@ -17,9 +17,10 @@ namespace ST10203070_PROG7311_POE
 
         }
 
+        // Method to act on login button being clicked
         protected void LoginButton_Click(object sender, EventArgs e)
         {
-            if (YourAuthenticationMethod(Username.Text, Password.Text))
+            if (UserAuthenticationMethod(Username.Text, Password.Text))
             {
                 FormsAuthentication.RedirectFromLoginPage(Username.Text, false);
             }
@@ -29,7 +30,8 @@ namespace ST10203070_PROG7311_POE
             }
         }
 
-        private bool YourAuthenticationMethod(string username, string password)
+        // Method to authenticate user credentials entered against database data
+        private bool UserAuthenticationMethod(string username, string password)
         {
             using (var db = new AgriEnergyDbEntities())
             {

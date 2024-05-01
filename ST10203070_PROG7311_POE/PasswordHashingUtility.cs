@@ -9,6 +9,7 @@ namespace ST10203070_PROG7311_POE
 {
     public static class PasswordHashingUtility
     {
+        // Method to create salt for password hashing
         public static string CreateSalt(int size)
         {
             var rng = new RNGCryptoServiceProvider();
@@ -17,6 +18,7 @@ namespace ST10203070_PROG7311_POE
             return Convert.ToBase64String(buffer);
         }
 
+        // Method to generate password hash
         public static string GenerateSHA256Hash(string input, string salt)
         {
             byte[] bytes = Encoding.UTF8.GetBytes(input + salt);
@@ -27,6 +29,7 @@ namespace ST10203070_PROG7311_POE
             }
         }
 
+        // Method to convert byte array to hex string
         private static string ByteArrayToHexString(byte[] ba)
         {
             StringBuilder hex = new StringBuilder(ba.Length * 2);

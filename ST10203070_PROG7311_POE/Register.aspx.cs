@@ -11,6 +11,7 @@ namespace ST10203070_PROG7311_POE
         {
         }
 
+        // Method to register new user
         protected void RegisterButton_Click(object sender, EventArgs e)
         {
             // Retrieve user input from the form
@@ -72,12 +73,11 @@ namespace ST10203070_PROG7311_POE
 
                     db.SaveChanges(); // Save changes to role table
 
-                    // Redirect to login page or show a success message
+                    // Redirect to login page
                     Response.Redirect("Login.aspx", false);
                 }
                 catch (Exception ex)
                 {
-                    // Log the exception (e.g., to a file or database)
                     ErrorMessage.Text = "An error occurred while registering. Please try again.";
                 }
             }
