@@ -10,21 +10,21 @@
 
         <div class="row">
             <section class="col-md-4" aria-labelledby="farmingHubTitle">
-                <h2 id="farmingHubTitle">Sustainable Farming Hub</h2>
+                <h2 id="farmingHubTitle" style="color: #5cb85c;">Sustainable Farming Hub</h2>
                 <p>
                     A resource centre for sharing best practices in sustainable farming, including organic farming techniques, water conservation methods, and soil health maintenance.
                     Interactive forums and discussion boards for farmers to seek advice, share experiences, and collaborate on sustainable farming initiatives.
                 </p>
             </section>
             <section class="col-md-4" aria-labelledby="greenEnergyTitle">
-                <h2 id="greenEnergyTitle">Green Energy Marketplace</h2>
+                <h2 id="greenEnergyTitle" style="color: #5cb85c;">Green Energy Marketplace</h2>
                 <p>
                    A marketplace for green energy solutions tailored to agricultural needs, such as solar-powered irrigation systems, wind turbines for farms, and biogas energy solutions.
                    Features for comparing products, reviewing technologies, and connecting with green tech providers.
                 </p>
             </section>
             <section class="col-md-4" aria-labelledby="educationTitle">
-                <h2 id="educationTitle">Educational and Training Resources</h2>
+                <h2 id="educationTitle" style="color: #5cb85c;">Educational and Training Resources</h2>
                 <p>
                     Online courses, webinars, and workshops on integrating green energy technologies in agriculture.
                     Material focusing on the benefits and practicalities of adopting renewable energy sources on farms.                

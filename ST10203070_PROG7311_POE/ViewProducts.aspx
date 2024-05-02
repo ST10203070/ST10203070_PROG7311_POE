@@ -61,9 +61,9 @@
         }
          /* Button Styles */
         .btn-green {
-            width: 100%;
+            width: 5%;
             padding: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 2.5px;
             background-color: #5cb85c; 
             color: white; 
             border: none;
@@ -118,7 +118,7 @@
                         <asp:DropDownList ID="ProductTypeDropdown" runat="server">
                         </asp:DropDownList>
 
-                        <asp:Button ID="FilterProductsButton" runat="server" Text="Filter" OnClick="FilterProducts_Click" />
+                        <asp:Button ID="FilterProductsButton" runat="server" Text="Filter" OnClick="FilterProducts_Click" CssClass="btn-green"/>
                     </div>
 
                     <asp:GridView ID="ProductsGridView" runat="server" AutoGenerateColumns="False">
