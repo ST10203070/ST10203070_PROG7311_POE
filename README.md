@@ -25,3 +25,10 @@ Interact with the Web Application:
 Troubleshooting
 - Ensure that all project dependencies are properly restored.
 - Check if the IIS Express is configured correctly in Visual Studio.
+
+System functionalities and user roles
+- The system has two distinct user roles: Employee and Farmer. 
+- The system allows for the creation of new users, either Employees or Farmers. 
+- The system allows for users with an account to login. 
+- The system allows for Farmers to add new products to their profiles with details like name, category, and production date. 
+- The system allows for Employees to add new Farmer profiles with details like name and email. Additionally, Employees can view and filter a comprehensive list of products from any farmer based on criteria such as date range and product type. 
